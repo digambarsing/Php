@@ -1,0 +1,132 @@
+<html>
+<body>
+
+<?php
+$text = "Hello world!";
+$x = 5;
+$y = 10.5;
+
+echo " $text <br>";
+echo "$x <br>";
+echo $y;
+
+// variables are case sensitve in php.
+$txt = "W3Schools";
+$Txt=" hello everyone";
+echo "I love $txt! <br>";
+echo "I love $Txt!";
+
+
+// some operations on variables
+$x = 5;
+$y = 4;
+echo $x + $y;
+echo "<br>";
+echo $x - $y;
+echo "<br>";
+echo $x * $y;
+echo "<br>";
+echo $x / $y;
+
+// php is a loosely typed language.
+// adding a string to an integer without causing an error.
+$x = 5;
+$y = " hiii";
+echo $x + $y;
+
+//echo has no return value while print has a return value of 1 so it can be used in expressions. echo can take multiple parameters (although such usage is rare) while print can take one argument. echo is marginally faster than print.
+// echo and print both are output statements.
+echo "<h2>PHP is Fun!</h2>";
+echo "Hello world!<br>";
+print "hiii";
+
+
+// DATATYPES:-
+//A string is a sequence of characters, like "Hello world!".
+//A string can be any text inside quotes. You can use single or double quotes:
+$x = "Hello world!";
+$y = 'Hello world!';
+
+echo $x;
+echo "<br>"; 
+echo $y;
+
+
+/*An integer must have at least one digit
+An integer must not have a decimal point
+An integer can be either positive or negative
+Integers can be specified in: decimal (base 10), hexadecimal (base 16), octal (base 8), or binary (base 2) notation.*/
+$x = 5985; 
+$Y= 5464546;
+echo($x);
+echo "<br>";
+echo $Y;
+
+
+// A float (floating point number) is a number with a decimal point or a number in exponential form.
+//A Boolean represents two possible states: TRUE or FALSE.
+$x = 10.365;
+echo($x);
+
+
+// about var_dump($var) function:-
+// this function is used to tell about datatype of variable:
+$x=54;
+$y=54.54;
+$z="hello world";
+$a="hello everyone";
+echo var_dump($x);echo "<BR>";
+echo var_dump($y);echo "<BR>";
+echo var_dump($a);echo "<BR>";
+echo var_dump($z);
+//in case of string this also return size of string.
+
+
+
+//An array stores multiple values in one single variable.
+
+//In the following example $cars is an array. The PHP var_dump() function returns the data type and value:
+// var_dump also tell size of array.
+// and also tell about indexing.
+$cars = array("Volvo","BMW","Toyota","hyundai");
+echo " $cars <BR>";
+var_dump($cars);
+// output :-
+//Array
+//array(4) { [0]=> string(5) "Volvo" [1]=> string(3) "BMW" [2]=> string(6) "Toyota" [3]=> string(7) "hyundai" }
+
+
+ABOUT STRING FUNCTIONS
+/*strlen() - Return the Length of a String
+The PHP strlen() function returns the length of a string.
+var_dump also tell about size of string. */
+echo strlen("Hello world!");echo"<BR>";
+echo var_dump("hello world!");
+
+
+
+//str_word_count() - Count Words in a String
+//The PHP str_word_count() function counts the number of words in a string.
+echo str_word_count("Hello world HII !");
+
+// THIS FUNCTION IS USED TO REVERSE A STRING.
+echo strrev("Hello world!");
+echo" <BR>";
+echo strrev("Hello world HII !");
+
+
+/*strpos() - Search For a Text Within a String
+The PHP strpos() function searches for a specific text within a string. If a match is found, the function returns the character position of the first match. If no match is found, it will return FALSE.
+Tip: The first character position in a string is 0 (not 1). */
+echo strpos("Hello world!", "world");
+echo "<BR>";
+echo strpos("hello everyone","hello");
+
+
+/str_replace() - Replace Text Within a String
+//The PHP str_replace() function replaces some characters with some other characters in a string.
+echo str_replace("world", "Doll", "Hello world!");
+?>
+
+</body>
+</html>
