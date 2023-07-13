@@ -2,130 +2,231 @@
 <body>
 
 <?php
-$text = "Hello world!";
-$x = 5;
-$y = 10.5;
+/*PHP Arithmetic Operators
+The PHP arithmetic operators are used with numeric values to perform common arithmetical operations, such as addition, subtraction, multiplication etc.*/
+$x = 10;  
+$y = 6;
 
-echo " $text <br>";
-echo "$x <br>";
-echo $y;
-
-// variables are case sensitve in php.
-$txt = "W3Schools";
-$Txt=" hello everyone";
-echo "I love $txt! <br>";
-echo "I love $Txt!";
-
-
-// some operations on variables
-$x = 5;
-$y = 4;
 echo $x + $y;
-echo "<br>";
-echo $x - $y;
-echo "<br>";
-echo $x * $y;
-echo "<br>";
-echo $x / $y;
-
-// php is a loosely typed language.
-// adding a string to an integer without causing an error.
-$x = 5;
-$y = " hiii";
-echo $x + $y;
-
-//echo has no return value while print has a return value of 1 so it can be used in expressions. echo can take multiple parameters (although such usage is rare) while print can take one argument. echo is marginally faster than print.
-// echo and print both are output statements.
-echo "<h2>PHP is Fun!</h2>";
-echo "Hello world!<br>";
-print "hiii";
-
-
-// DATATYPES:-
-//A string is a sequence of characters, like "Hello world!".
-//A string can be any text inside quotes. You can use single or double quotes:
-$x = "Hello world!";
-$y = 'Hello world!';
-
-echo $x;
-echo "<br>"; 
-echo $y;
-
-
-/*An integer must have at least one digit
-An integer must not have a decimal point
-An integer can be either positive or negative
-Integers can be specified in: decimal (base 10), hexadecimal (base 16), octal (base 8), or binary (base 2) notation.*/
-$x = 5985; 
-$Y= 5464546;
-echo($x);
-echo "<br>";
-echo $Y;
-
-
-// A float (floating point number) is a number with a decimal point or a number in exponential form.
-//A Boolean represents two possible states: TRUE or FALSE.
-$x = 10.365;
-echo($x);
-
-
-// about var_dump($var) function:-
-// this function is used to tell about datatype of variable:
-$x=54;
-$y=54.54;
-$z="hello world";
-$a="hello everyone";
-echo var_dump($x);echo "<BR>";
-echo var_dump($y);echo "<BR>";
-echo var_dump($a);echo "<BR>";
-echo var_dump($z);
-//in case of string this also return size of string.
-
-
-
-//An array stores multiple values in one single variable.
-
-//In the following example $cars is an array. The PHP var_dump() function returns the data type and value:
-// var_dump also tell size of array.
-// and also tell about indexing.
-$cars = array("Volvo","BMW","Toyota","hyundai");
-echo " $cars <BR>";
-var_dump($cars);
-// output :-
-//Array
-//array(4) { [0]=> string(5) "Volvo" [1]=> string(3) "BMW" [2]=> string(6) "Toyota" [3]=> string(7) "hyundai" }
-
-
-ABOUT STRING FUNCTIONS
-/*strlen() - Return the Length of a String
-The PHP strlen() function returns the length of a string.
-var_dump also tell about size of string. */
-echo strlen("Hello world!");echo"<BR>";
-echo var_dump("hello world!");
-
-
-
-//str_word_count() - Count Words in a String
-//The PHP str_word_count() function counts the number of words in a string.
-echo str_word_count("Hello world HII !");
-
-// THIS FUNCTION IS USED TO REVERSE A STRING.
-echo strrev("Hello world!");
-echo" <BR>";
-echo strrev("Hello world HII !");
-
-
-/*strpos() - Search For a Text Within a String
-The PHP strpos() function searches for a specific text within a string. If a match is found, the function returns the character position of the first match. If no match is found, it will return FALSE.
-Tip: The first character position in a string is 0 (not 1). */
-echo strpos("Hello world!", "world");
 echo "<BR>";
-echo strpos("hello everyone","hello");
+echo $x - $y;
+echo "<BR>";
+echo $x * $y;
+echo "<BR>";
+echo $x / $y;// return quotient
+echo "<BR>";
+echo $x % $y;// return remainder
+echo "<BR>";
+echo $x ** $y;
+
+/* PHP Assignment Operators
+The PHP assignment operators are used with numeric values to write a value to a variable.
+
+The basic assignment operator in PHP is "=". It means that the left operand gets set to the value of the assignment expression on the right.*/
+$x = 10; 
+$y = 10;
+echo $x;
+echo "<BR>";
+echo $x+=$y;//x=x+y
+echo "<BR>";
+echo $x-=$y;
+echo "<BR>";
+echo $x*=$y;
+echo "<BR>";
+echo $x/=$y;
+echo "<BR>";
+
+/* PHP Comparison Operators
+The PHP comparison operators are used to compare two values (number or string):*/
+$x = 100;  
+$y = "100";
+
+var_dump($x == $y);
+echo "<BR>";
+var_dump($x === $y);
+echo "<BR>";
+var_dump($x != $y);
+echo "<BR>";
+var_dump($x !== $y);
+echo "<BR>";
+var_dump($x > $y);
+echo "<BR>";
+var_dump($x < $y);
+echo "<BR>";
+var_dump($x >= $y);
+echo "<BR>";
+var_dump($x <= $y);
+echo "<BR>";
+var_dump($x <> $y);// tell about not equal
+echo "<BR>";
+var_dump($x <=> $y);
 
 
-/str_replace() - Replace Text Within a String
-//The PHP str_replace() function replaces some characters with some other characters in a string.
-echo str_replace("world", "Doll", "Hello world!");
+
+
+/* PHP Increment / Decrement Operators
+The PHP increment operators are used to increment a variable's value.
+
+The PHP decrement operators are used to decrement a variable's value.
+
+*/
+$x = 10;  
+echo ++$x;//11
+echo"<BR>";
+echo $x++;//11
+echo"<BR>";
+echo --$x;//11
+echo"<BR>";
+echo $x--;//11
+echo"<BR>";
+
+
+
+//PHP Logical Operators
+//The PHP logical operators are used to combine conditional statements.
+$x = 100;  
+$y = 50;
+
+if ($x == 100 and $y == 50) {
+    echo "Hello world!";
+}
+if ($x == 100 or $y == 50) {
+    echo "Hello world!";
+}
+if ($x == 100 xor $y == 50) {
+    echo "Hello world!";
+}
+
+
+
+// php string operators
+/*PHP Array Operators
+The PHP array operators are used to compare arrays.*/
+$x = array("a" => "red", "b" => "green");  
+$y = array("c" => "blue", "d" => "yellow");  
+
+print_r($x + $y); 
+var_dump($x == $y); 
+var_dump($x != $y); 
+var_dump($x === $y); 
+var_dump($x !== $y);
+var_dump($x <> $y); 
+
+
+$txt1 = "Hello";
+$txt2 = " world!";
+echo $txt1 . $txt2;// concatenation
+echo "<BR>";
+echo $txt1 .= $txt2;// concatenation assingment
+
+
+
+
+PHP Conditional Statements
+Very often when you write code, you want to perform different actions for different conditions. You can use conditional statements in your code to do this.
+
+In PHP we have the following conditional statements:
+
+if statement - executes some code if one condition is true
+if...else statement - executes some code if a condition is true and another code if that condition is false
+if...elseif...else statement - executes different codes for more than two conditions
+switch statement - selects one of many blocks of code to be executed
+
+// use of  if statement
+$t = 25;
+
+if ($t < "122") {
+  echo "Have a good day!";
+}
+
+
+//PHP - The if...else Statement
+//The if...else statement executes some code if a condition is true and another code if that condition is false.
+$t = 25;
+
+if ($t < "22") {
+  echo "Have a good day!";
+}
+else{
+echo "Have a bad day!";}
+//PHP - The if...elseif...else Statement
+$t = 20;
+
+if ($t > "22") {
+  echo "Have a good day!";
+}
+elseif($t=="22"){
+echo "Have a bad day!";
+}
+else{
+echo "Have a very bad day!";}
+
+/* The PHP switch Statement
+Use the switch statement to select one of many blocks of code to be executed*/
+$favcolor = "black";
+
+switch ($favcolor) {
+  case "red":
+    echo "Your favorite color is red!";
+    break;
+  case "blue":
+    echo "Your favorite color is blue!";
+    break;
+  case "green":
+    echo "Your favorite color is green!";
+    break;
+  default:
+    echo "Your favorite color is neither red, blue, nor green!";
+}
+PHP Loops
+Often when you write code, you want the same block of code to run over and over again a certain number of times. So, instead of adding several almost equal code-lines in a script, we can use loops.
+
+Loops are used to execute the same block of code again and again, as long as a certain condition is true.
+
+In PHP, we have the following loop types:
+
+while - loops through a block of code as long as the specified condition is true
+do...while - loops through a block of code once, and then repeats the loop as long as the specified condition is true
+for - loops through a block of code a specified number of times
+foreach - loops through a block of code for each element in an array
+
+ // while loop of php
+$x = 1;
+ 
+while($x <= 5) {
+  echo "The number is: $x <br>";
+  $x++;
+} 
+$x =15;
+$y = 10;
+ 
+while($x >$y) {
+  echo "The number is: $y <br>";
+  $y++;
+} 
+// for loop of php
+for ($x = 0; $x <= 100; $x+=10) {
+  echo "The number is: $x <br>";
+}
+$x=0;
+for (; $x <= 100; ) {
+  echo "The number is: $x <br>";
+  $x+=1;
+}
+
+/*The PHP do...while Loop
+The do...while loop will always execute the block of code once, it will then check the condition, and repeat the loop while the specified condition is true.
+Note: In a do...while loop the condition is tested AFTER executing the statements within the loop. This means that the do...while loop will execute its statements at least once, even if the condition is false. See example below.
+
+*/
+$x = 1;
+
+do {
+  echo "The number is: $x <br>";
+  $x++;
+} while ($x <= 0);
+
+
 ?>
 
 </body>
